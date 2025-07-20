@@ -23,9 +23,10 @@ Tracking AIS Reports Using Stone Soup
 # :download:`CSV file <../../demos/SolentAIS_20160112_130211.csv>`, using the Stone Soup generic
 # CSV reader.
 
+# Importing the necessary libraries if using project root as working directory
 from stonesoup.reader.generic import CSVDetectionReader
 detector = CSVDetectionReader(
-    "SolentAIS_20160112_130211.csv",
+    "docs/demos/SolentAIS_20160112_130211.csv",
     state_vector_fields=("Longitude_degrees", "Latitude_degrees"),
     time_field="Time")
 
@@ -211,6 +212,6 @@ for track in tracks:
 
 
 # %%
-
+m.save("AIS_Solent_Tracks.html")
 # sphinx_gallery_thumbnail_path = '_static/sphinx_gallery/AIS_Solent_Tracker_thumb.png'
 m
